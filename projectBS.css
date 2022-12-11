@@ -1,0 +1,328 @@
+@font-face {
+	font-family: "Erotique Trial"; src: url("//db.onlinewebfonts.com/t/ef9b834a49a9db2acd53644b712b7e83.eot"); src: url("//db.onlinewebfonts.com/t/ef9b834a49a9db2acd53644b712b7e83.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ef9b834a49a9db2acd53644b712b7e83.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ef9b834a49a9db2acd53644b712b7e83.woff") format("woff"), url("//db.onlinewebfonts.com/t/ef9b834a49a9db2acd53644b712b7e83.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ef9b834a49a9db2acd53644b712b7e83.svg#Erotique Trial") format("svg"); 
+}
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+* {
+	box-sizing: border-box;
+}
+body, html, .intro {
+	margin: 0;
+	height: 100%;
+}
+h1, h2, h3 {
+	font-family: Erotique Trial;
+	color: #baa189;
+}
+p {
+	font-family: 'Cairo', sans-serif;
+}
+.checked {
+  color: yellow;
+}
+.headercolor {
+	background-color: #d9d1cc;
+}
+.full-header {
+	height: 100vh;
+}
+.bgcolor {
+	background-color: #e6cdba;
+}
+.tri-clip-left {
+	background-image: linear-gradient(to left bottom, transparent 50%, #e6cdba 2%);
+}
+.rev-tri-clip-left {
+	background-image: linear-gradient(to right top, transparent 50%, #e6cdba 2%);
+}
+.bgcolor h1, .bgcolor h2 , .rev-tri-clip-left h1, .rev-tri-clip-left h2{
+	color: #4c3e35;
+}
+.headerflex {
+	position: relative;
+	overflow: hidden;
+}
+#title {
+	font-family: Erotique Trial;
+	font-style: bold;
+	font-size: 60px;
+	letter-spacing: 4px;
+	color: #4c3e35;
+}
+#subtitle {
+	font-family: 'Cairo', sans-serif;
+	color: #baa189;
+}
+#shop {
+	font-family: 'Rubik Mono One', sans-serif;
+	font-size: 60px;
+	font-weight: 400;
+	color: #4c3e35;
+}
+span {
+	color: #b09572;
+}
+.fullimg {
+	height: 100%;
+}
+.circle {
+	position: absolute;
+	bottom: -40%;
+	right: 30%;
+	height: 500px;
+	width: 500px;
+	background-color: #efe3d9;
+	opacity: 0.6;
+	border-radius: 50%;
+}
+.decor {
+	position: absolute;
+	left: 0px;
+	top: 20%;
+	border-radius: 0px 50px 50px 0px;
+	opacity: 0.6;
+	width: 15%;
+	height: 100px;
+	background-color: #efe3d9;
+}
+.decor-flipped {
+	position: absolute;
+	right: 0px;
+	bottom: 20%;
+	border-radius: 50px 0px 0px 50px;
+	opacity: 0.6;
+	width: 15%;
+	height: 100px;
+	background-color: #efe3d9;
+}
+/* styling navbar */
+.transparentDropdown, .transparentDropdown a:hover {
+	background: rgba(255,255,255,0.2);
+	border: none;
+}
+.navbar {
+	background-color: transparent;
+	font-family: 'Cairo', sans-serif;
+}
+.navbar-custom li a, .navbar-custom .navbar-brand {
+	color: #4c3e35;
+}
+.navbar-custom li a:hover:not(.active) {
+	opacity: 0.5;
+	color: #b09572;
+}
+.navbar.navbar-custom .navbar-toggler-icon {
+	background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+}
+/* Styling cards */
+.card-img-dim {
+	width:300px;
+	height:512px;
+}
+.flip-card {
+	background-color: #b09572;
+	width: 300px;
+	height: 512px;
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	background-color: #bbb;
+	color: black;
+}
+
+.flip-card-back {
+	background-color: #c8b5a8;
+	color: #4c3e35;
+	transform: rotateY(180deg);
+}
+.flip-card-back h1 {
+	font-size: 30px;
+	color: #4c3e35;
+}
+.card img {
+	height: 60vh;
+}
+/* styling tabs */
+button:focus, input:focus, textarea:focus, select:focus {
+	outline: none; 
+}
+.tabs {
+	display: block;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0;
+	overflow: hidden; 
+}
+.tabs [class^="tab"] label, .tabs [class*=" tab"] label {
+    color: #4c3e35;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1em;
+    padding: 2rem 0;
+    text-align: center; 
+}
+.tabs [class^="tab"] [type="radio"], .tabs [class*=" tab"] [type="radio"] {
+    border-bottom: 1px solid rgba(239, 237, 239, 0.5);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+.tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus, .tabs [class*=" tab"] [type="radio"]:hover, .tabs [class*=" tab"] [type="radio"]:focus {
+	border-bottom: 1px solid #e6cdba; 
+}
+.tabs [class^="tab"] [type="radio"]:checked, .tabs [class*=" tab"] [type="radio"]:checked {
+	border-bottom: 2px solid #e6cdba; 
+}
+.tabs [class^="tab"] [type="radio"]:checked + div, .tabs [class*=" tab"] [type="radio"]:checked + div {
+	opacity: 1; 
+}
+.tabs [class^="tab"] [type="radio"] + div, .tabs [class*=" tab"] [type="radio"] + div {
+	display: block;
+    opacity: 0;
+    padding: 2rem 0;
+    width: 90%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.tabs .tab-2 {
+    width: 50%; 
+}
+.tabs .tab-2 [type="radio"] + div {
+    width: 200%;
+    margin-left: 200%; 
+}
+.tabs .tab-2 [type="radio"]:checked + div {
+    margin-left: 0;
+}
+.tabs .tab-2:last-child [type="radio"] + div {
+    margin-left: 100%;
+}
+.tabs .tab-2:last-child [type="radio"]:checked + div {
+    margin-left: -100%;
+}
+img.oval-clipped {
+    clip-path: ellipse(60% 50% at 50% 50%);
+    height: 80%;
+}
+.abs {
+	position: absolute;
+}
+.rel {
+	position: relative;
+}
+.bottom-right-block {
+	top: 50%;
+	right: 10%;
+}
+.quote-svg {
+	top: -20%;
+	right: 10%;
+	z-index: 9;
+	height: 40px;
+	width: 40px;
+	color: #b09572;
+}
+@media (min-width: 550px) and (max-width: 750px) {
+  html,
+  body,
+  .intro {
+    height: 750px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  .intro {
+    height: 750px;
+  }
+}
+/* styling responsive lightbox with modal */
+.row-grid {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-grid {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column-grid img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column-grid {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-grid {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.popup-gallery a img {
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.popup-gallery a img:hover {
+	opacity: 0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+}
