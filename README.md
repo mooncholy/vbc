@@ -1,5 +1,4 @@
 # Virtual Book Club
-***  
 
 ## Project Description  
 This project resembles a social cataloging website that stores a collection of book 
